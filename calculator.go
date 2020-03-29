@@ -1,7 +1,9 @@
 package mycalculator
 
 import (
+	"bufio"
 	"fmt"
+	"os"
 	"strconv"
 	"strings"
 )
@@ -45,6 +47,12 @@ func readInput() string {
 	var input string
 	fmt.Scanln(&input)
 	return input
+}
+
+func ReadInput() string {
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Scan()
+	return scanner.Text()
 }
 
 func splitInfo(entrada string) (int, int, string) {
