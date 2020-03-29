@@ -9,12 +9,12 @@ import (
 func main() {
 	fmt.Println("______C A L C U L A T O R__________")
 	c := calc{}
-	c.operate(splitInfo(readInput()))
+	c.Operate(splitInfo(readInput()))
 }
 
 type calc struct{}
 
-func (calc) operate(operador1 int, operador2 int, operador string) int {
+func (calc) Operate(operador1 int, operador2 int, operador string) int {
 	switch operador {
 	case "+":
 		fmt.Println(operador1 + operador2)
